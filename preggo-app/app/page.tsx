@@ -51,9 +51,9 @@ export default function Home() {
             Healthcare Providers
           </a>
           {/* New button linking to the About page */}
-          <Link href="/about"
+          <Link href="/patient_signin"
           className="rounded-full border border-solid border-blue-500 transition-colors flex items-center justify-center bg-blue-500 text-white hover:bg-blue-600 font-medium text-sm sm:text-base h-10 sm:h-12 px-6 sm:px-8">
-              About Us
+              Patient Sign In
           </Link>
         </div>
       </main>
