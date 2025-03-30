@@ -11,8 +11,9 @@ const profiles = [
     age: 29,
     phone: "123-456-7890",
     email: "ajohnson@gmail.com",
-    bio: "<insert a bio>",
+    bio: "Pregnancy is a life-changing journey, and I’m here to support you every step of the way. I’m Alice, a Nurse Practitioner with a deep passion for maternal wellness. My approach combines evidence-based medicine with holistic care, ensuring that both your physical and emotional health are nurtured. Whether you need guidance on nutrition, stress management, or birth preparation, I offer compassionate, personalized care to help you feel your best during this special time.",
     image: "https://randomuser.me/api/portraits/women/1.jpg",
+    certifications: ["Certified Nurse Practitioner", "Maternal-Fetal Medicine Specialist"]
   },
   {
     id: 2,
@@ -20,8 +21,9 @@ const profiles = [
     age: 35,
     phone: "123-456-7890",
     email: "bobsm@gmail.com",
-    bio: "Passionate about delivering quality work and making a difference to those who need it most.",
+    bio: "Hi there! I’m Bob, a dedicated Nurse Practitioner who believes that every mother deserves a trusted partner during pregnancy. With 10+ years of experience in women’s health, I provide comprehensive prenatal and postpartum care that prioritizes both your well-being and your baby’s development. From answering your late-night questions to offering reassurance through each trimester, I am committed to making your journey smoother, safer, and more joyful.",
     image: "https://randomuser.me/api/portraits/men/2.jpg",
+    certifications: ["Board-Certified Nurse Practitioner (FNP-BC)", "Maternal Newborn Nursing Certification (RNC-MNN)"]
   },
   {
     id: 3,
@@ -29,8 +31,9 @@ const profiles = [
     age: 27,
     phone: "123-456-7890",
     email: "carollee@gmail.com",
-    bio: "<insert a bio>",
+    bio: "Every pregnancy is unique, and so is the care you deserve. I’m Carol, a Nurse Practitioner specializing in maternal health, and I tailor my approach to meet your individual needs. Whether you’re experiencing your first pregnancy or adding to your growing family, I provide expert medical care with a personal touch. I’ll be your advocate, guide, and support system, helping you navigate everything from prenatal visits to postpartum recovery with confidence.",
     image: "https://randomuser.me/api/portraits/women/3.jpg",
+    certifications: ["Women's Health Nurse Practitioner (WHNP-BC)", "Maternal Newborn Nursing Certification (RNC-MNN)"]
   },
   {
     id: 4,
@@ -38,8 +41,9 @@ const profiles = [
     age: 31,
     phone: "123-456-7890",
     email: "davek98@gmail.com",
-    bio: "<insert a bio>",
+    bio: "Bringing a new life into the world is an incredible experience, and I’m here to help you every step of the way. I’m David, a Board-Certified Nurse Practitioner with a background in obstetric and family care. My goal is to empower you with the knowledge and support needed for a healthy pregnancy and a smooth transition into motherhood. From managing common pregnancy symptoms to preparing for labor, I provide expert, compassionate care tailored to your needs.",
     image: "https://randomuser.me/api/portraits/men/4.jpg",
+    certifications: ["Board-Certified Nurse Practitioner (FNP-BC)", "RNC-OB"]
   },
 ];
 
@@ -67,16 +71,22 @@ const ProfilePage = () => {
 
   return (
     <div suppressHydrationWarning={true} className="max-w-md mx-auto p-6 shadow-lg border rounded-lg text-center">
-      <img suppressHydrationWarning={true} src={profile.image} alt={profile.name} className="w-24 h-24 rounded-full mx-auto border" />
+      <button 
+        onClick={() => window.history.back()} // Customizable onClick action
+        className="absolute top-40 left-40 bg-gray-100 hover:bg-gray-300 text-gray-700 font-bold py-2 px-3 rounded-full"
+      > ← </button>
+      <img suppressHydrationWarning={true} src={profile.image} alt={profile.name} className="w-40 h-40 rounded-full mx-auto border" />
       <h2 suppressHydrationWarning={true} className="text-xl font-bold mt-4">{profile.name}</h2>
-      {/* <p className="text-gray-500">{profile.contact}</p> */}
       <p suppressHydrationWarning={true} className="mt-4 text-gray-700">{profile.bio}</p>
       <h3 suppressHydrationWarning={true} className="mt-4 text-lg font-semibold">Certifications</h3>
-      {/* <ul className="list-disc list-inside text-gray-600">
+      {<ul className="list-disc list-inside text-gray-600">
         {profile.certifications.map((cert, index) => (
           <li key={index}>{cert}</li>
         ))}
-      </ul> */}
+      </ul>}
+      <h3 suppressHydrationWarning={true} className="mt-4 text-lg font-semibold">Contact</h3>
+      <p><a href={"tel:" + profile.phone} className="font-medium text-blue-600 dark:text-blue-500 hover:underline">{profile.phone}</a></p>
+      <p><a href={"mailto:" + profile.email} target="_blank" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">{profile.email}</a></p>
     </div>
   );
 };
