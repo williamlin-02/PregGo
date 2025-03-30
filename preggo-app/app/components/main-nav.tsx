@@ -1,6 +1,6 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export function MainNav({
   className,
@@ -12,29 +12,29 @@ export function MainNav({
       {...props}
     >
       <Link
-        href="/examples/dashboard"
+        href="/dashboard"
         className="text-sm font-medium transition-colors hover:text-primary"
       >
-        Overview
+        Dashboard
       </Link>
       <Link
-        href="/examples/dashboard"
+        href="/search"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
-        Customers
+        Find a Healthcare Provider
       </Link>
       <Link
-        href="/examples/dashboard"
+        href="/patient_signin"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
-        Products
+        Patient Login
       </Link>
       <Link
-        href="/examples/dashboard"
+        href="/provider_signin"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
-        Settings
+        Provider Login
       </Link>
     </nav>
-  )
+  );
 }
