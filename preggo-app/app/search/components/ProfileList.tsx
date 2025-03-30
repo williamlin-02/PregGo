@@ -46,7 +46,7 @@ const profiles = [
 
 const ProfileList = () => {
   const handleCardClick = (id : number) => {
-    let href = "/profile/" + id;
+    let href = "/profiles?id=" + id;
     window.location.href = href;
   };
 
