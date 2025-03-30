@@ -68,8 +68,8 @@ export default function LearnMorePage() {
                             ⚠️ Preeclampsia
                           </div>
                           <p className="text-sm text-muted-foreground mt-2">
-                            A serious condition involving **high blood
-                            pressure** and potential organ damage, commonly
+                            A serious condition involving high blood
+                            pressure and potential organ damage, commonly
                             affecting the liver and kidneys.
                           </p>
                         </CardContent>
@@ -82,7 +82,7 @@ export default function LearnMorePage() {
                             ⚠️ Post-partum Hemorrhage
                           </div>
                           <p className="text-sm text-muted-foreground mt-2">
-                            A major cause of **bleeding after childbirth**,
+                            A major cause of bleeding after childbirth,
                             which can lead to significant blood loss and may
                             require emergency intervention.
                           </p>
@@ -110,7 +110,7 @@ export default function LearnMorePage() {
                             ⚠️ Unnecessary C-Sections
                           </div>
                           <p className="text-sm text-muted-foreground mt-2">
-                            A **surgical procedure** that may be performed
+                            A surgical procedure that may be performed
                             without medical necessity, leading to unnecessary
                             risks for both the mother and the baby.
                           </p>
@@ -121,7 +121,7 @@ export default function LearnMorePage() {
                     <Separator className="my-2" />
 
                     <p className="text-xs text-muted-foreground mt-4">
-                      For **early detection** and **effective management**,
+                      For early detection and effective management,
                       regular prenatal care and timely interventions are
                       essential in minimizing risks during pregnancy. Always
                       consult healthcare professionals for the best options for
@@ -142,7 +142,7 @@ export default function LearnMorePage() {
 
                     <p className="text-sm text-muted-foreground mt-2">
                       Preeclampsia is a serious pregnancy complication
-                      characterized by **high blood pressure** and potential
+                      characterized by high blood pressure and potential
                       organ damage, commonly affecting the liver and kidneys.
                     </p>
 
@@ -150,22 +150,22 @@ export default function LearnMorePage() {
 
                     <p className="text-sm font-semibold">⚠️ Symptoms</p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
+                      <li>Shoulder pain </li>
+                      <li>Belly pain, especially in the upper right side</li>
                       <li>Severe headaches</li>
-                      <li>Swelling in hands, face, or legs</li>
-                      <li>Blurred vision or light sensitivity</li>
                       <li>Shortness of breath</li>
-                      <li>Protein in urine (sign of kidney damage)</li>
+                      <li>Peeing less or not at all</li>
                     </ul>
 
                     <Separator className="my-2" />
 
                     <p className="text-sm font-semibold">📌 Risk Factors</p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
-                      <li>First-time pregnancy</li>
+                      <li>Chronic hypertension</li>
                       <li>History of high blood pressure</li>
                       <li>Carrying multiples (twins, triplets, etc.)</li>
                       <li>Diabetes or kidney disease</li>
-                      <li>Obesity or poor diet</li>
+                      <li>Autoimmune conditions such as lupus</li>
                     </ul>
 
                     <Separator className="my-2" />
@@ -174,8 +174,8 @@ export default function LearnMorePage() {
                       🩺 Treatment & Management
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      There is no cure for preeclampsia except **delivering the
-                      baby**. Doctors may recommend:
+                      There is no cure for preeclampsia except delivering the
+                      baby. Doctors may recommend:
                     </p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
                       <li>
@@ -189,8 +189,8 @@ export default function LearnMorePage() {
                     <Separator className="my-2" />
 
                     <p className="text-xs text-muted-foreground">
-                      If you experience any symptoms, **seek immediate medical
-                      attention** to prevent complications for both mother and
+                      If you experience any symptoms, seek immediate medical
+                      attention to prevent complications for both mother and
                       baby.
                     </p>
                   </CardContent>
@@ -207,9 +207,9 @@ export default function LearnMorePage() {
                     </div>
 
                     <p className="text-sm text-muted-foreground mt-2">
-                      **Postpartum Hemorrhage (PPH)** is excessive bleeding
-                      after childbirth, occurring in about **1-5% of
-                      deliveries**. It can be life-threatening if not treated
+                      Postpartum Hemorrhage (PPH) is excessive bleeding
+                      after childbirth, occurring in about 1-5% of
+                      deliveries. It can be life-threatening if not treated
                       promptly.
                     </p>
 
@@ -218,8 +218,8 @@ export default function LearnMorePage() {
                     <p className="text-sm font-semibold">⚠️ Symptoms</p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
                       <li>
-                        Heavy or uncontrolled bleeding (more than **500ml after
-                        vaginal birth**, **1000ml after C-section**)
+                        Heavy or uncontrolled bleeding (more than 500ml after
+                        vaginal birth, 1000ml after C-section)
                       </li>
                       <li>Rapid heart rate or palpitations</li>
                       <li>Dizziness or fainting</li>
@@ -234,20 +234,20 @@ export default function LearnMorePage() {
                     </p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
                       <li>
-                        **Uterine atony** (uterus fails to contract after birth)
+                        Uterine atony (uterus fails to contract after birth)
                       </li>
                       <li>
-                        **Retained placenta** (placenta or fragments remain in
+                        Retained placenta (placenta or fragments remain in
                         the uterus)
                       </li>
                       <li>
-                        **Tears in the birth canal** (cervix, vagina, or
+                        Tears in the birth canal (cervix, vagina, or
                         perineum)
                       </li>
-                      <li>**Blood clotting disorders**</li>
-                      <li>Prolonged labor or **C-section delivery**</li>
+                      <li>Blood clotting disorders</li>
+                      <li>Prolonged labor or C-section delivery</li>
                       <li>Multiple pregnancies (twins, triplets, etc.)</li>
-                      <li>High blood pressure or **preeclampsia**</li>
+                      <li>High blood pressure or preeclampsia</li>
                     </ul>
 
                     <Separator className="my-2" />
@@ -260,15 +260,15 @@ export default function LearnMorePage() {
                       options include:
                     </p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
-                      <li>**Uterine massage** to stimulate contractions</li>
+                      <li>Uterine massage to stimulate contractions</li>
                       <li>
-                        **Medications** (Oxytocin, Misoprostol) to help the
+                        Medications (Oxytocin, Misoprostol) to help the
                         uterus contract
                       </li>
-                      <li>**Removing retained placenta** if necessary</li>
-                      <li>**Blood transfusion** in severe cases</li>
+                      <li>Removing retained placenta if necessary</li>
+                      <li>Blood transfusion in severe cases</li>
                       <li>
-                        **Surgical procedures** (uterine artery embolization or
+                        Surgical procedures (uterine artery embolization or
                         hysterectomy in extreme cases)
                       </li>
                     </ul>
@@ -276,8 +276,8 @@ export default function LearnMorePage() {
                     <Separator className="my-2" />
 
                     <p className="text-xs text-muted-foreground">
-                      If excessive bleeding occurs after childbirth, **seek
-                      emergency medical care** immediately. Early detection and
+                      If excessive bleeding occurs after childbirth, seek
+                      emergency medical care immediately. Early detection and
                       treatment can prevent severe complications.
                     </p>
                   </CardContent>
@@ -295,7 +295,7 @@ export default function LearnMorePage() {
                     </div>
 
                     <p className="text-sm text-muted-foreground mt-2">
-                      **Maternal sepsis** is a life-threatening infection during
+                      Maternal sepsis is a life-threatening infection during
                       pregnancy, childbirth, or postpartum. It is a major cause
                       of maternal mortality worldwide.
                     </p>
@@ -304,12 +304,12 @@ export default function LearnMorePage() {
 
                     <p className="text-sm font-semibold">⚠️ Symptoms</p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
-                      <li>Fever above **100.4°F (38°C)**</li>
-                      <li>Rapid heart rate (**tachycardia**)</li>
+                      <li>Fever above 100.4°F (38°C)</li>
+                      <li>Rapid heart rate (tachycardia)</li>
                       <li>Shortness of breath or difficulty breathing</li>
                       <li>Severe chills or shivering</li>
                       <li>Confusion, dizziness, or fainting</li>
-                      <li>Low blood pressure (**shock**)</li>
+                      <li>Low blood pressure (shock)</li>
                       <li>Severe abdominal or pelvic pain</li>
                       <li>Foul-smelling vaginal discharge</li>
                     </ul>
@@ -321,15 +321,15 @@ export default function LearnMorePage() {
                     </p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
                       <li>
-                        **Untreated infections** (UTIs, pneumonia, bacterial
+                        Untreated infections (UTIs, pneumonia, bacterial
                         vaginosis)
                       </li>
-                      <li>**Prolonged or obstructed labor**</li>
+                      <li>Prolonged or obstructed labor</li>
                       <li>
-                        **Cesarean section (C-section)** or invasive procedures
+                        Cesarean section (C-section) or invasive procedures
                       </li>
-                      <li>**Retained placenta or fetal tissue**</li>
-                      <li>**Poor hygiene** during childbirth</li>
+                      <li>Retained placenta or fetal tissue</li>
+                      <li>Poor hygiene during childbirth</li>
                       <li>
                         Weakened immune system (diabetes, HIV, malnutrition)
                       </li>
@@ -345,23 +345,23 @@ export default function LearnMorePage() {
                       Medical interventions include:
                     </p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
-                      <li>**Broad-spectrum antibiotics** to fight infection</li>
-                      <li>**IV fluids** to maintain blood pressure</li>
+                      <li>Broad-spectrum antibiotics to fight infection</li>
+                      <li>IV fluids to maintain blood pressure</li>
                       <li>
-                        **Surgical procedures** (removing infected tissue or
+                        Surgical procedures (removing infected tissue or
                         drainage)
                       </li>
-                      <li>**Oxygen therapy** in severe cases</li>
+                      <li>Oxygen therapy in severe cases</li>
                       <li>
-                        **Blood pressure support** (vasopressors if needed)
+                        Blood pressure support (vasopressors if needed)
                       </li>
                     </ul>
 
                     <Separator className="my-2" />
 
                     <p className="text-xs text-muted-foreground">
-                      Maternal sepsis can escalate rapidly. **Seek immediate
-                      medical attention** if symptoms appear, especially after
+                      Maternal sepsis can escalate rapidly. Seek immediate
+                      medical attention if symptoms appear, especially after
                       childbirth.
                     </p>
                   </CardContent>
@@ -379,11 +379,11 @@ export default function LearnMorePage() {
                     </div>
 
                     <p className="text-sm text-muted-foreground mt-2">
-                      A **cesarean section (C-section)** is a surgical procedure
+                      A cesarean section (C-section) is a surgical procedure
                       used to deliver a baby. While life-saving in certain
                       cases, an increasing number of C-sections are performed
-                      without medical necessity, leading to potential **short-
-                      and long-term risks**.
+                      without medical necessity, leading to potential short-
+                      and long-term risks.
                     </p>
 
                     <Separator className="my-2" />
@@ -393,13 +393,13 @@ export default function LearnMorePage() {
                     </p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
                       <li>
-                        **WHO recommends** a C-section rate of **10-15%**, but
-                        many countries exceed **30-50%**.
+                        WHO recommends a C-section rate of 10-15%, but
+                        many countries exceed 30-50%.
                       </li>
                       <li>
                         Unnecessary C-sections are often influenced by
-                        **hospital policies, fear of labor pain, or scheduling
-                        convenience**.
+                        hospital policies, fear of labor pain, or scheduling
+                        convenience.
                       </li>
                     </ul>
 
@@ -410,23 +410,23 @@ export default function LearnMorePage() {
                     </p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
                       <li>
-                        **Increased maternal mortality & morbidity** (bleeding,
+                        Increased maternal mortality & morbidity (bleeding,
                         infections, blood clots)
                       </li>
                       <li>
-                        **Longer recovery time** compared to vaginal birth
+                        Longer recovery time compared to vaginal birth
                       </li>
                       <li>
-                        **Breathing problems in newborns** (higher risk of
+                        Breathing problems in newborns (higher risk of
                         respiratory distress)
                       </li>
                       <li>
-                        **Higher risk of complications in future pregnancies**
+                        Higher risk of complications in future pregnancies
                         (placenta previa, uterine rupture)
                       </li>
                       <li>
-                        **Increased neonatal intensive care unit (NICU)
-                        admissions**
+                        Increased neonatal intensive care unit (NICU)
+                        admissions
                       </li>
                     </ul>
 
@@ -437,19 +437,19 @@ export default function LearnMorePage() {
                     </p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
                       <li>
-                        **Fear of labor pain** (elective C-section for
+                        Fear of labor pain (elective C-section for
                         convenience)
                       </li>
                       <li>
-                        **Inductions leading to failed labor progression**
+                        Inductions leading to failed labor progression
                       </li>
                       <li>
-                        **Doctor or hospital preference** for scheduling
+                        Doctor or hospital preference for scheduling
                         efficiency
                       </li>
-                      <li>**Misinterpretation of fetal distress signs**</li>
+                      <li>Misinterpretation of fetal distress signs</li>
                       <li>
-                        **Previous C-section** (VBAC is often safe but
+                        Previous C-section (VBAC is often safe but
                         underused)
                       </li>
                     </ul>
@@ -461,14 +461,14 @@ export default function LearnMorePage() {
                     </p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
                       <li>
-                        **Placenta previa** (placenta blocking the cervix)
+                        Placenta previa (placenta blocking the cervix)
                       </li>
-                      <li>**Fetal distress** (low oxygen levels)</li>
+                      <li>Fetal distress (low oxygen levels)</li>
                       <li>
-                        **Breech position** (sometimes can be turned manually)
+                        Breech position (sometimes can be turned manually)
                       </li>
-                      <li>**Severe preeclampsia or maternal complications**</li>
-                      <li>**Obstructed labor or uterine rupture risk**</li>
+                      <li>Severe preeclampsia or maternal complications</li>
+                      <li>Obstructed labor or uterine rupture risk</li>
                     </ul>
 
                     <Separator className="my-2" />
@@ -477,24 +477,24 @@ export default function LearnMorePage() {
                       🌿 Promoting Safe Birth Practices
                     </p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside">
-                      <li>Encouraging **natural labor progression**</li>
+                      <li>Encouraging natural labor progression</li>
                       <li>
-                        Supporting **VBAC (Vaginal Birth After C-Section) when
-                        safe**
+                        Supporting VBAC (Vaginal Birth After C-Section) when
+                        safe
                       </li>
-                      <li>Improving **education on childbirth options**</li>
-                      <li>Reducing **unnecessary labor inductions**</li>
+                      <li>Improving education on childbirth options</li>
+                      <li>Reducing unnecessary labor inductions</li>
                       <li>
-                        Ensuring **C-sections are used only when truly needed**
+                        Ensuring C-sections are used only when truly needed
                       </li>
                     </ul>
 
                     <Separator className="my-2" />
 
                     <p className="text-xs text-muted-foreground">
-                      **C-sections save lives when necessary but carry risks
-                      when overused.** Patients should be informed about their
-                      **birthing options** to make the safest decision.
+                      C-sections save lives when necessary but carry risks
+                      when overused. Patients should be informed about their
+                      birthing options to make the safest decision.
                     </p>
                   </CardContent>
                 </Card>
