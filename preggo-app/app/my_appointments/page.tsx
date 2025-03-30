@@ -1,8 +1,12 @@
+import TrackingMap from "./components/TrackingMap";
+
 export default function MyAppointments() {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-screen p-8">
-        <h1 className="text-3xl font-bold mb-6"> My Appointments</h1>
-        <div className="w-full max-w-2xl">
+  return (
+    <div className="flex h-screen bg-gray-100 relative">
+      {/* Left side: Appointments */}
+      <div className="w-2/3 overflow-y-auto p-8 bg-white shadow-md rounded-lg m-4">
+        <h1 className="text-3xl font-bold mb-6">My Appointments</h1>
+        <div className="w-full">
           {/* April 2025 */}
           <p className="text-xl font-semibold mb-4">April 2025</p>
           <table className="table-auto w-full mb-8 border-collapse border border-gray-300">
@@ -26,7 +30,7 @@ export default function MyAppointments() {
               </tr>
             </tbody>
           </table>
-  
+
           {/* May 2025 */}
           <p className="text-xl font-semibold mb-4">May 2025</p>
           <table className="table-auto w-full mb-8 border-collapse border border-gray-300">
@@ -76,5 +80,19 @@ export default function MyAppointments() {
           </table>
         </div>
       </div>
-    );
-  }
+
+      {/* Right side: Tracking Map */}
+      <div className="w-1/3 flex items-center justify-center m-4 relative">
+        {/* Banner */}
+        <div className="absolute top-0 left-0 w-full bg-black text-white text-center py-2 rounded-lg z-10">
+          Carol is 5 minutes away
+        </div>
+
+        {/* Map Container */}
+        <div className="w-full h-[80%] bg-white shadow-md rounded-lg p-4 z-0 relative">
+          <TrackingMap />
+        </div>
+      </div>
+    </div>
+  );
+}
