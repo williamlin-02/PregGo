@@ -8,6 +8,10 @@ interface Appointment {
   available: boolean;
 }
 
+interface CalendarProps {
+  selectedProviderName: string | null;
+}
+
 // Mock data - hardcoded for demo purposes
 const mockAppointments: Record<number, Appointment[]> = {
   7: [
@@ -46,14 +50,36 @@ const mockAppointments: Record<number, Appointment[]> = {
   ],
 };
 
-// Days that have available appointments
-const datesWithAppointments = Object.keys(mockAppointments).map(Number);
-
-const Calendar: React.FC = () => {
+const Calendar: React.FC<CalendarProps> = ({ selectedProviderName }) => {
   const [selectedDate, setSelectedDate] = useState<number | null>(null);
   
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const daysInApril = Array.from({ length: 30 }, (_, i) => i + 1);
+
+  // Filter appointments for the selected provider
+  const getFilteredAppointments = () => {
+    if (!selectedProviderName) {
+      return mockAppointments; // Return all appointments if no provider selected
+    }
+
+    // Create a new object with only the selected provider's appointments
+    const filteredAppointments: Record<number, Appointment[]> = {};
+    
+    Object.entries(mockAppointments).forEach(([dayKey, appointments]) => {
+      const providerAppointments = appointments.filter(
+        appt => appt.doctor === selectedProviderName
+      );
+      
+      if (providerAppointments.length > 0) {
+        filteredAppointments[parseInt(dayKey)] = providerAppointments;
+      }
+    });
+    
+    return filteredAppointments;
+  };
+
+  const filteredAppointments = getFilteredAppointments();
+  const datesWithAppointments = Object.keys(filteredAppointments).map(Number);
 
   const handleDateClick = (day: number) => {
     // Toggle selection if clicking the same date, otherwise select the new date
@@ -67,7 +93,9 @@ const Calendar: React.FC = () => {
   return (
     <div className="w-full max-w-3xl mx-auto">
       <div className="calendar mb-6">
-        <h1 className="text-xl font-bold mb-4 text-center">April</h1>
+        <h1 className="text-xl font-bold mb-4 text-center">
+          {selectedProviderName ? `${selectedProviderName}'s Availability` : "April"}
+        </h1>
         <div className="grid grid-cols-7 gap-2 text-center font-bold mb-2">
           {daysOfWeek.map((day) => (
             <div key={day} className="py-2">{day}</div>
@@ -83,12 +111,12 @@ const Calendar: React.FC = () => {
           {daysInApril.map((day) => (
             <div
               key={day}
-              className={`p-2 border rounded cursor-pointer transition-colors ${
+              className={`p-2 border rounded transition-colors ${
                 hasAppointments(day) 
-                  ? "bg-blue-100 hover:bg-blue-200" 
-                  : "hover:bg-gray-100"
+                  ? "bg-blue-100 hover:bg-blue-200 cursor-pointer" 
+                  : "text-gray-400"
               } ${selectedDate === day ? "ring-2 ring-blue-500 font-bold" : ""}`}
-              onClick={() => handleDateClick(day)}
+              onClick={() => hasAppointments(day) && handleDateClick(day)}
             >
               {day}
             </div>
@@ -112,7 +140,7 @@ const Calendar: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {mockAppointments[selectedDate]
+                {filteredAppointments[selectedDate]
                   .filter(appt => appt.available)
                   .map((appointment, index) => (
                     <tr key={index}>
@@ -128,7 +156,7 @@ const Calendar: React.FC = () => {
                       </td>
                     </tr>
                   ))}
-                {mockAppointments[selectedDate].filter(appt => appt.available).length === 0 && (
+                {filteredAppointments[selectedDate].filter(appt => appt.available).length === 0 && (
                   <tr>
                     <td colSpan={3} className="border px-4 py-2 text-center">
                       No available appointments for this day.
