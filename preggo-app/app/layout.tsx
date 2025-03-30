@@ -5,6 +5,7 @@ import "./globals.css";
 import { MainNav } from "./components/main-nav";
 import { Search } from "./components/search";
 import { UserNav } from "./components/user-nav";
+import Chatbot from "./components/chatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,9 @@ export default function RootLayout({
             </div>
           </div>
           {children}
+          <div className="fixed bottom-4 right-4 z-50">
+            <Chatbot />
+          </div>
         </div>
       </body>
     </html>
