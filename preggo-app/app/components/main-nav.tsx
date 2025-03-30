@@ -12,12 +12,6 @@ export function MainNav({
       {...props}
     >
       <Link
-        href="/dashboard"
-        className="text-sm font-medium transition-colors hover:text-primary"
-      >
-        Dashboard
-      </Link>
-      <Link
         href="/search"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
@@ -34,6 +28,18 @@ export function MainNav({
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
         Provider Login
+      </Link>
+      <Link
+        href="/my_appointments"
+        className="text-sm font-medium transition-colors hover:text-primary"
+      >
+        My Appointments
+      </Link>
+      <Link
+        href="/learn_more"
+        className="text-sm font-medium transition-colors hover:text-primary"
+      >
+        Learn More
       </Link>
     </nav>
   );

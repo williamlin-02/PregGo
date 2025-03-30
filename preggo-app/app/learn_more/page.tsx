@@ -6,32 +6,32 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const metadata: Metadata = {
-  title: "Dashboard",
+  title: "Learn More",
 };
 
-export default function DashboardPage() {
+export default function LearnMorePage() {
   return (
     <>
       <div className="md:hidden">
         <Image
-          src="/examples/dashboard-light.png"
+          src="/examples/learnmore-light.png"
           width={1280}
           height={866}
-          alt="Dashboard"
+          alt="LearnMore"
           className="block dark:hidden"
         />
         <Image
-          src="/examples/dashboard-dark.png"
+          src="/examples/learnmore-dark.png"
           width={1280}
           height={866}
-          alt="Dashboard"
+          alt="LearnMore"
           className="hidden dark:block"
         />
       </div>
       <div className="hidden flex-col md:flex">
         <div className="flex-1 space-y-4 p-8 pt-6">
           <div className="flex items-center justify-between space-y-2">
-            <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
+            <h2 className="text-3xl font-bold tracking-tight">Learn More</h2>
           </div>
           <Tabs defaultValue="overview" className="space-y-4">
             <TabsList>

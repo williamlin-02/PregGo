@@ -61,7 +61,7 @@ const ProfileList = () => {
   return (
     <div className="w-full max-w-md mx-auto p-4">
       <h2 className="text-xl font-bold mb-4">Nurses Near You</h2>
-      <ScrollArea className="h-80 border rounded-lg p-2">
+      <ScrollArea className="h-120 border rounded-lg p-2">
         <div className="space-y-4">
           {profiles.map((profile) => (
             <Card key={profile.id} className="flex items-center gap-4 p-4 shadow-md hover:bg-gray-100 cursor-pointer" onClick={() => handleCardClick(profile.id)}>
