@@ -10,8 +10,8 @@ export default function Home() {
           className="dark:invert"
           src="/preggoLogo.png"
           alt="PregGo Logo"
-          width={180}
-          height={38}
+          width={360}
+          height={76}
           priority
         />
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-200">
@@ -32,10 +32,10 @@ export default function Home() {
           >
             <Image
               className="dark:invert mr-2"
-              src="/vercel.svg"
+              src="/pregnant_icon.png"
               alt="Patient Icon"
-              width={20}
-              height={20}
+              width={32}
+              height={32}
             />
             Patient Sign In
           </Link>
@@ -54,8 +54,8 @@ export default function Home() {
               className="dark:invert mr-2"
               src="/Caduceus.png"
               alt="Provider Icon"
-              width={30}
-              height={40}
+              width={36}
+              height={48}
             />
             Healthcare Provider Sign In
           </Link>
