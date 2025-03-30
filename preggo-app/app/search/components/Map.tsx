@@ -19,8 +19,14 @@ if (L) {
     iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
     iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
     shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+    className: "custom-hue-marker",
   });
 }
+
+// Inline CSS for hue rotation
+const markerStyle = {
+  filter: "hue-rotate(180deg)", // Rotate the hue by 180 degrees
+};
 
 // Dynamically import React-Leaflet components
 const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
@@ -33,6 +39,16 @@ const Map = () => {
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null);
   const [address, setAddress] = useState<string>("");
   const [suggestions, setSuggestions] = useState<any[]>([]);
+  const [customIcon, setCustomIcon] = useState<any>(null);
+  const [dummyData, setDummyData] = useState<any[]>([]);
+
+  // // dummy data
+  // const dummyData = [
+  //   { id: 1, name: "Alice", lat: 37.7749, lng: -122.4194, description: "Nearby person 1" },
+  //   { id: 2, name: "Bob", lat: 37.7849, lng: -122.4094, description: "Nearby person 2" },
+  //   { id: 3, name: "Carol", lat: 37.7649, lng: -122.4294, description: "Nearby person 3" },
+  //   { id: 4, name: "David", lat: 37.7650, lng: -122.4300, description: "Nearby person 4" },
+  // ];
 
   useEffect(() => {
     // Get the user's current location
@@ -41,6 +57,8 @@ const Map = () => {
         (position) => {
           const { latitude, longitude } = position.coords;
           setCurrentLocation([latitude, longitude]);
+          // Generate dummy data relative to current location
+          setDummyData(generateRelativePoints(latitude, longitude));
         },
         (error) => {
           console.error("Error getting location:", error);
@@ -49,7 +67,66 @@ const Map = () => {
     } else {
       console.error("Geolocation is not supported by this browser.");
     }
+
+    const initializeLeaflet = async () => {
+      if (typeof window !== "undefined") {
+        const L = await import("leaflet");
+        
+        // Create custom black icon using leaflet-color-markers
+        const blackIcon = new L.Icon({
+          iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+        });
+    
+        setCustomIcon(blackIcon);
+      }
+    };
+
+    initializeLeaflet();
   }, []);
+
+  const generateRelativePoints = (centerLat: number, centerLng: number) => {
+    // Helper function to generate random offset within range (in degrees)
+    const randomOffset = (min: number, max: number) => {
+      return Math.random() * (max - min) + min;
+    };
+  
+    // Generate 4 random points within roughly 500m radius
+    return [
+      { 
+        id: 1, 
+        name: "Alice", 
+        lat: centerLat + randomOffset(-0.005, 0.005),
+        lng: centerLng + randomOffset(-0.005, 0.005), 
+        description: "Nearby person 1" 
+      },
+      { 
+        id: 2, 
+        name: "Bob", 
+        lat: centerLat + randomOffset(-0.005, 0.005),
+        lng: centerLng + randomOffset(-0.005, 0.005),
+        description: "Nearby person 2" 
+      },
+      { 
+        id: 3, 
+        name: "Carol", 
+        lat: centerLat + randomOffset(-0.005, 0.005),
+        lng: centerLng + randomOffset(-0.005, 0.005),
+        description: "Nearby person 3" 
+      },
+      { 
+        id: 4, 
+        name: "David", 
+        lat: centerLat + randomOffset(-0.005, 0.005), // ~500m radius
+        lng: centerLng + randomOffset(-0.005, 0.005),
+        description: "Nearby person 4" 
+      },
+    ];
+  };
 
   const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
@@ -89,6 +166,8 @@ const Map = () => {
     setCurrentLocation([lat, lng]);
     setAddress(suggestion.formatted); // Update the input field with the selected suggestion
     setSuggestions([]); // Clear suggestions
+    // Generate new dummy data for the new location
+    setDummyData(generateRelativePoints(lat, lng));
   };
 
   const handleReturnToCurrentLocation = () => {
@@ -152,6 +231,17 @@ const Map = () => {
               </Popup>
             </Marker>
           )}
+
+          {/* Render markers for dummy data */}
+          {dummyData.map((person) => (
+            <Marker key={person.id} position={[person.lat, person.lng]} icon={customIcon}>
+              <Popup>
+                <strong>{person.name}</strong>
+                <br />
+                {person.description}
+              </Popup>
+            </Marker>
+          ))}
         </MapContainer>
       </div>
     </div>
