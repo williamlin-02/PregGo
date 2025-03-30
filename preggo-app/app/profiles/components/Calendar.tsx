@@ -67,6 +67,7 @@ const Calendar: React.FC = () => {
   return (
     <div className="w-full max-w-3xl mx-auto">
       <div className="calendar mb-6">
+        <h1 className="text-xl font-bold mb-4 text-center">April</h1>
         <div className="grid grid-cols-7 gap-2 text-center font-bold mb-2">
           {daysOfWeek.map((day) => (
             <div key={day} className="py-2">{day}</div>
